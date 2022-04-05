@@ -77,7 +77,7 @@ struct ContentView1: View {
 //                        Button("OK", role: .cancel) { }
 //                    }
                     .sheet(isPresented: $showAlert) {
-                                new2()
+                        new2(selectedDis: $selectedDis)
                             }
             }
             }
