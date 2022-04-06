@@ -51,21 +51,36 @@ struct new2: View {
         }.onAppear{
             var step1 = commonElements(between: selectedDis, and: Covid_19).count
             var step2 = Covid_19.count
+            
+            var stepD = commonElements(between: selectedDis, and: Diabetes).count
             var step2D = Diabetes.count
+            
+            var stepCRD = commonElements(between: selectedDis, and: chronicRespiratoryDiseases).count
             var step2CRD = chronicRespiratoryDiseases.count
+           
+            var stepCD = commonElements(between: selectedDis, and: CardiovascularDiseases).count
             var step2CD = CardiovascularDiseases.count
+            
+            var stepH = commonElements(between: selectedDis, and: hypertension).count
             var step2H = hypertension.count
+            
+            var stepNP = commonElements(between: selectedDis, and: nutritionalProblem).count
             var step2NP = nutritionalProblem.count
-            var stepI = Influenza.count
+            
+            var stepI = commonElements(between: selectedDis, and: Influenza).count
+            var step2I = Influenza.count
+            
+            var stepA = commonElements(between: selectedDis, and: Allergies).count
             var step2A = Allergies.count
+            
             result = Double(step1) / Double(step2) * 100.0
-            resultD = Double(step1) / Double(step2D) * 100.0
-            resultCRD =  Double(step1) / Double(step2CRD) * 100.0
-            resultCD = Double(step1) / Double(step2CD) * 100.0
-            resultH = Double(step1) / Double(step2H) * 100.0
-            resultNP = Double(step1) / Double(step2NP) * 100.0
-            resultI = Double(step1) / Double(stepI) * 100.0
-            resultA = Double(step1) / Double(step2A) * 100.0
+            resultD = Double(stepD) / Double(step2D) * 100.0
+            resultCRD =  Double(stepCRD) / Double(step2CRD) * 100.0
+            resultCD = Double(stepCD) / Double(step2CD) * 100.0
+            resultH = Double(stepH) / Double(step2H) * 100.0
+            resultNP = Double(stepNP) / Double(step2NP) * 100.0
+            resultI = Double(stepI) / Double(step2I) * 100.0
+            resultA = Double(stepA) / Double(step2A) * 100.0
         }
         
     }
